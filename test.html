@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSONP</title>
+    <style type="text/css">
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        script是不区分同源和非同源的
+    </div>
+
+</body>
+<!--<script type="text/javascript">-->
+    <!--function fn(date) {-->
+        <!--console.log(date);//date就是我们要请求的数据-->
+    <!--}-->
+    <!---->
+    <!---->
+<!--</script>-->
+<!--<script type="text/javascript" src="http://202.102.100.100/35ff706fd57d11c141cdefcd58d6562b.js?callback=fn"></script>-->
+<script type="text/javascript">
+//    $.ajax({
+//        url:"",
+//        type:"get",
+//        dataType:"json",
+//        async:true,
+//        success: function (data) {
+//            console.log(data);
+//        }
+//    });
+//    $.ajax({
+//        url:"",
+////        type:"get",jsonp都是get和异步请求
+//        dataType:"jsonp",
+//        jsonpCallback:"fn",//自定义传递给服务器的传递的函数名
+//        jsonp:"cd",//URL问好传参的参数名
+//        success: function (data) {
+//            console.log(data);
+//        }
+//    })
+
+</script>
+</html>

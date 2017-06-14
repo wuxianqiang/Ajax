@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax</title>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript">
+    //什么是Ajax
+    //客户端和服务端的数据交互
+    //创建Ajax存在兼容问题，要进行兼容处理
+    var xhr = creatXHR();
+    //获取服务器时间，在异步readyState等于2的时候就把事件得到（倒计时抢购）减少时间差
+    xhr.open("head", "banner.txt", true); //状态码已经是1
+    //怎样设置请求头信息
+    xhr.setRequestHeader("name","wu");
+    xhr.timeout = "1000";//设置超时时间
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 2){
+            var tiemr = xhr.getResponseHeader("Date");
+            console.log(new Date(tiemr));
+        }
+    };
+    xhr.send(null);
+    //异步就是没等到send也可以操作其他任务
+    //true异步SYNC
+    //false同步ASYNC
+
+    //异步编程，定时器，事件绑定，回调函数也可以认为，Ajax中也可以使用异步编程
+
+
+
+</script>
+</body>
+
+</html>
